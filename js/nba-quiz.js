@@ -1,7 +1,13 @@
 //questions and answers
 var quiz = [
-  ['The Charlotte Hornets drafted which player in the 1996 NBA draft?', 'kobe bryant'],
-  ['Which commissioner preceeded Adam Silver?', 'david stern'],
+  { 
+    question: 'The Charlotte Hornets drafted which player in the 1996 NBA draft?',
+    answer: 'kobe bryant'
+  },
+  {
+    question: 'Which commissioner preceeded Adam Silver?', 
+    answer: 'david stern'
+  },
 ]
 
 //vars to store user input, correct questions and answers, wrong questions and answers, and output text.
@@ -55,8 +61,8 @@ var htmlWrong;
     
 //stores correct and wrong answers user supplies into two different arrays 
 for (i = 0; i < quiz.length; i += 1) {
-  question = quiz[i][0];
-  answer = quiz[i][1];
+  question = quiz[i].question;
+  answer = quiz[i].answer;
   response = prompt(question);
   response = response.toLowerCase();
     if (response === answer) {
